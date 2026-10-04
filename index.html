@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NARIN MARKET – Fresh Products, Every Day</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="header" id="header">
+  <div class="container nav">
+    <a href="#home" class="logo"><span class="logo-mark">N</span>NARIN <b>MARKET</b></a>
+    <nav class="menu" id="menu">
+      <a href="#home">Home</a><a href="#categories">Categories</a><a href="#products">Products</a>
+      <a href="#about">About Us</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <label class="search"><span>🔍</span><input id="searchInput" type="search" placeholder="Search products…" aria-label="Search products"></label>
+      <button class="icon-btn" id="openFav" aria-label="Favorites">♥<em id="favCount">0</em></button>
+      <button class="icon-btn" id="openCart" aria-label="Open cart">🛒<em id="cartCount">0</em></button>
+      <button class="burger" id="burger" aria-label="Menu"><i></i><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <span class="pill">🌿 Free delivery over 1500 KGS</span>
+      <h1>Fresh Products, Every Day</h1>
+      <p>Fruits, dairy, bakery and everything your family needs — picked fresh, priced fairly and delivered to your door.</p>
+      <div class="hero-btns">
+        <a href="#products" class="btn">Shop Now</a>
+        <a href="#offers" class="btn ghost">See offers</a>
+      </div>
+      <ul class="stats"><li><b>500+</b> products</li><li><b>30 min</b> delivery</li><li><b>4.9★</b> rating</li></ul>
+    </div>
+    <div class="hero-visual">
+      <img src="images/hero.svg" alt="Basket of fresh groceries">
+      <div class="float f1"><img src="images/apple.svg" alt=""><div><b>Apples</b><small>from 120 KGS</small></div></div>
+      <div class="float f2"><img src="images/croissant.svg" alt=""><div><b>Fresh bakery</b><small>baked daily</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CATEGORIES ===== -->
+<section class="section" id="categories">
+  <div class="container">
+    <div class="head"><h2>Shop by category</h2><button class="link" id="showAll">Show all products</button></div>
+    <div class="cat-grid" id="catGrid"></div>
+  </div>
+</section>
+
+<!-- ===== SPECIAL OFFERS ===== -->
+<section class="section offers" id="offers">
+  <div class="container">
+    <div class="head"><h2>Special Offers</h2><span class="sale-tag">Up to 30% OFF</span></div>
+    <div class="grid" id="offerGrid"></div>
+  </div>
+</section>
+
+<!-- ===== PRODUCTS ===== -->
+<section class="section" id="products">
+  <div class="container">
+    <div class="head"><h2 id="productsTitle">All products</h2></div>
+    <div class="chips" id="chips"></div>
+    <div class="grid" id="productGrid"></div>
+    <p class="empty" id="empty" hidden>No products found.</p>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="section about" id="about">
+  <div class="container about-grid">
+    <div><h2>About NARIN MARKET</h2>
+      <p>NARIN MARKET provides fresh, high-quality and affordable products for every family.</p>
+      <p class="muted">We work directly with local farmers and bakers, check every delivery by hand and pack your order the same day.</p></div>
+    <ul class="features">
+      <li><span>🚚</span><b>Fast delivery</b><small>Within 30–60 minutes</small></li>
+      <li><span>🌱</span><b>Always fresh</b><small>Local farm products</small></li>
+      <li><span>💳</span><b>Fair prices</b><small>Weekly discounts</small></li>
+      <li><span>🛡️</span><b>Quality promise</b><small>Money back guarantee</small></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="section" id="contact">
+  <div class="container contact-grid">
+    <div>
+      <h2>Contact us</h2>
+      <ul class="info">
+        <li>📞 <span>+996 555 123 456</span></li>
+        <li>✉️ <span>hello@narinmarket.kg</span></li>
+        <li>📍 <span>Chuy Avenue 120, Bishkek</span></li>
+        <li>🕘 <span>Every day, 08:00 – 22:00</span></li>
+      </ul>
+    </div>
+    <form class="form" id="contactForm">
+      <input required placeholder="Your name"><input required type="email" placeholder="Email">
+      <textarea required rows="4" placeholder="Your message"></textarea>
+      <button class="btn" type="submit">Send message</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container foot-grid">
+    <div><a href="#home" class="logo light"><span class="logo-mark">N</span>NARIN <b>MARKET</b></a>
+      <p>Fresh, high-quality and affordable products for every family.</p>
+      <div class="social"><a href="#" aria-label="Instagram">IG</a><a href="#" aria-label="Facebook">FB</a><a href="#" aria-label="Telegram">TG</a><a href="#" aria-label="WhatsApp">WA</a></div></div>
+    <div><h4>Quick links</h4><a href="#home">Home</a><a href="#products">Products</a><a href="#about">About Us</a><a href="#contact">Contact</a></div>
+    <div><h4>Categories</h4><div id="footCats"></div></div>
+    <div><h4>Contact</h4><p>+996 555 123 456</p><p>hello@narinmarket.kg</p><p>Chuy Avenue 120, Bishkek</p></div>
+  </div>
+  <div class="copy">© 2026 NARIN MARKET. All rights reserved.</div>
+</footer>
+
+<!-- ===== CART PANEL ===== -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="cart" aria-label="Shopping cart">
+  <div class="drawer-head"><h3 id="drawerTitle">Your cart</h3><button class="x" data-close>✕</button></div>
+  <div class="drawer-body" id="cartItems"></div>
+  <div class="drawer-foot" id="cartFoot">
+    <div class="row"><span>Subtotal</span><b id="subtotal"></b></div>
+    <div class="row"><span>Delivery</span><b id="delivery"></b></div>
+    <div class="row total"><span>Total</span><b id="total"></b></div>
+    <button class="btn full" id="checkout">Checkout</button>
+  </div>
+</aside>
+
+<!-- ===== PRODUCT MODAL ===== -->
+<div class="modal" id="modal" aria-hidden="true"><div class="modal-box" id="modalBox"></div></div>
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
